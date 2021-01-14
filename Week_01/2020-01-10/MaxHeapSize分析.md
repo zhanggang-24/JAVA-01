@@ -1,4 +1,5 @@
 ##1.G1-CMS-Parallel最大yang区计算
+
 	①G1 GC
 	java -Xmx1g -Xms1g -XX:-UseAdaptiveSizePolicy -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -jar gateway-server-0.0.1-SNAPSHOT.jar
 	   MinHeapFreeRatio         = 40
@@ -128,8 +129,9 @@
 	最大young区: Xmx/3=682m
 
 
-以下是老师的分享数据
-##2.Parallel GC和CMS GC的最大young区大小如何计算
+
+##以下是老师的分享数据:
+	2.Parallel GC和CMS GC的最大young区大小如何计算
 	默认情况下，大小会受到自适应参数影响，我们先关掉此参数-XX:-UseAdaptiveSizePolicy。
 	然后试验如下：
 	java -Xmx1g -Xms1g -XX:-UseAdaptiveSizePolicy -XX:+UseParallelGC -jar target/gateway-server-0.0.1-SNAPSHOT.jar
@@ -168,7 +170,7 @@
 	   MaxNewSize               = 697892864 (665.5625MB)
 	   OldSize                      = 1449590784 (1382.4375MB)
 
-##CMS GC的 默认GC进程数是怎么来的？
+	CMS GC的 默认GC进程数是怎么来的？
 	区分young区的parnew gc线程数和old区的cms线程数，分别为以下两参数：
 	-XX:ParallelGCThreads=m
 	-XX:ConcGCThreads=n 
