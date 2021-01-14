@@ -78,7 +78,6 @@
 	   G1HeapRegionSize         = 0 (0.0MB)
 	最大young区: Xmx/3=1081m
 
-
 	*********************
 	我本机16核，默认并发线程数为13，即ParallelGCThreads = 13，根据公式，最大young区=64M * 并发GC线程数(4) * 13 / 10 =1081m；
 	但当上面参数Xmx1g，Xmx2g时，由于最大young区计算为：1081m，猜测是其它区不够分，没有触发CMS GC,而是触发了Parallel GC，
@@ -87,7 +86,6 @@
 	测试加如下参数：-XX:ParallelGCThreads=4 Xmx1g，可以正常触发CMS GC;
 
 	**********************
-
 
 	③Parallel GC
 	java -Xmx1g -Xms1g -XX:-UseAdaptiveSizePolicy -XX:+UseParallelGC  -jar gateway-server-0.0.1-SNAPSHOT.jar
@@ -131,6 +129,7 @@
 
 
 ##以下是老师的分享数据:
+
 	2.Parallel GC和CMS GC的最大young区大小如何计算
 	默认情况下，大小会受到自适应参数影响，我们先关掉此参数-XX:-UseAdaptiveSizePolicy。
 	然后试验如下：
