@@ -62,9 +62,9 @@ full gc,CMS 并发gc
 	程序执行1s
 	命令：java -XX:+UseG1GC -Xms256m -Xmx256m -Xloggc:gc.demo.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps  GCLogAnalysis
 
-| Xms&Xmx | 生成对象个数 | youngGC次数 |fullGC次数 |Mixed GC次数|Pause GC总时长|Concurrent GC 总时长
-| :----| :---- | :---- |:---- |:---- |:---- |
-| 256m |0-OOM| 0 |0|0|0|0
+| Xms&Xmx | 生成对象个数 | youngGC次数 |fullGC次数 |Mixed GC次数|Pause GC总时长|Concurrent GC 总时长|
+| :----| :---- | :---- |:---- |:---- |:---- |:---- |
+| 256m |0-OOM| 0 |0|0|0|0|
 | 512m|11733 |41|3|39|480ms|28ms|
 | 1g|20405 | 19|0|10|350ms|10.9ms|
 | 2g|23530 | 13|0|1|200ms|2.56ms|
