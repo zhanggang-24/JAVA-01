@@ -31,6 +31,8 @@
 ## 各GC最大young区计算方式
 	默认情况下：堆各部分大小会受到自使用参数的影响（UseAdaptiveSizePolicy），关闭命令：-XX:-UseAdaptiveSizePolicy；
 	串行
+		最大young区：默认占最大堆内存的1/3，即：Xmx/3; 
+		默认eden : to : from =8:1:1
 	并行（Parallel）
 		最大young区：默认占最大堆内存的1/3，即：Xmx/3;
 	CMS
@@ -45,13 +47,32 @@
 	G1
 		最大young区默认占整个heap的60% ；
 
+## GC 日志分析关注点
+	1.吞吐量：如果GC时间太长，真正业务处理时间就减少，此时要优化GC;
+	2.单次GC暂停时间过长，会影响程序的延迟指标，对要求低延迟的程序影响较大；
+	3.堆内存使用率过高（系统容量），full gc 后老年代任然接近全满，则程序性能大幅降低，考虑增加堆内存容量；
 
-## G1垃圾回收相关梳理：
-	垃圾回收模式
-		纯年轻代模式垃圾收集
-		[GC pause (G1 Evacuation Pause) (young), 0.0092774 secs]-纯年轻代模式转移暂停（年轻代空间用满后出发）-并行收集
-		混合模式垃圾收集
-		[GC pause (G1 Humongous Allocation) (young) (initial-mark), 0.0022913 secs]
-		[GC pause (G1 Evacuation Pause) (mixed), 0.0049752 secs]
+## GC日志相关参数(JDK8)
+	-Xloggc:gc.demo.log，将GC信息输出到gc.demo.log文件中
+	-XX:+PrintGC,查看GC基本信息
+	-XX:+PrintGCDetails打印GC的细节
+	-XX:+PrintGCDateStamps, 打印GC发送的日期时间
+	-XX:+PrintHeapAtGC，查看GC前后堆，方法区可用容量变化
+
+
+## G1垃圾回收过程：
+	1.年轻代模式转移暂停
+	[GC pause (G1 Evacuation Pause) (young), 0.0092774 secs]-纯年轻代模式转移暂停（年轻代空间用满后出发）-并行收集
+	2.并发标记
+		a.当堆内存的总体使用比例达到一定数值，会触发并发标记，默认比例是：45%，可以通过JVM参数：InitiatingHeapOccupancyPercent设置
+		b.并发标记阶段：
+			初始标记：[GC pause (G1 Humongous Allocation) (young) (initial-mark), 0.0022913 secs]
+			root区扫描：[GC concurrent-root-region-scan-start]
+			并发标记：[GC concurrent-mark-start]
+			再次标记：[GC remark 2021-01-17T15:34:17.977+0800: 0.244: [Finalize Marking, 0.0003445 secs] 2021-01-17T15:34:17.977+0800: 0.245: [GC ref-proc, 0.0000909 secs] 2021-01-17T15:34:17.977+0800: 0.245: [Unloading, 0.0003927 secs], 0.0011648 secs]
+			清理：[GC cleanup 235M->235M(512M), 0.0007614 secs]
+	3.转移暂停：混合模式
+	[GC pause (G1 Evacuation Pause) (mixed), 0.0049752 secs]
 		
+## 
 		

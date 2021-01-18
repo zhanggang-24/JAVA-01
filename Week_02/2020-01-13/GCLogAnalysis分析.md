@@ -1,0 +1,72 @@
+GC日志分析网站：https://gceasy.io/
+
+下述统计，程序执行时间1s,有点短，有些现象还是看不出来，需要增加程序执行时间再比对分析下；
+
+## 1.Serial GC
+	程序执行1s
+	命令：java -XX:+UseSerialGC -Xms256m -Xmx256m -Xloggc:gc.demo.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps  GCLogAnalysis
+
+	-Xloggc:gc.demo.log，将GC信息输出到gc.demo.log文件中
+	-XX:+PrintGCDetails，打印GC的细节
+	-XX:+PrintGCDateStamps, 打印GC发送的日期时间
+	
+
+| Xms&Xmx | 生成对象个数 | youngGC次数 |fullGC次数 |Pause GC总时长|
+| :----| :---- | :---- |:---- |:---- |
+| 256m |0-OOM| 0 |0|650ms|
+| 512m|13678 |9|16|660ms|
+| 1g|21723 | 17|3|420ms|
+| 2g|21826 | 10| 0|410ms|
+| 4g|22181 | 5| 0|290ms|
+| 8g|18512 | 2| 0|170ms|
+	
+单线程，所有gc操作都需要STW;
+Pause GC总时长 = young gc总时长＋full gc 总时长；
+	
+
+## 2.并行 GC
+	程序执行1s
+	命令：java -XX:+UseParallelGC -Xms256m -Xmx256m -Xloggc:gc.demo.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps  GCLogAnalysis
+
+| Xms&Xmx | 生成对象个数 | youngGC次数 |fullGC次数 |Pause GC总时长|
+| :----| :---- | :---- |:---- |:---- |
+| 256m |0-OOM| 0 |0|0|
+| 512m|9627 |20|20|730ms|
+| 1g|20620 | 36|3|470ms|
+| 2g|23271 | 18| 1|350ms|
+| 4g|26781 | 7| 0|200ms|
+| 8g|23986 | 3| 0|110ms|
+
+多线程，所有gc操作都需要STW;
+Pause GC总时长 = young 总时长＋full GC 总时长；
+吞吐率高
+
+
+## 3.GMS GC
+	程序执行1s
+	命令：java -XX:+UseConcMarkSweepGC -Xms256m -Xmx256m -Xloggc:gc.demo.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps  GCLogAnalysis
+
+| Xms&Xmx | 生成对象个数 | youngGC次数 |fullGC次数 |Pause GC总时长|Concurrent GC 总时长
+| :----| :---- | :---- |:---- |:---- |:---- |
+| 256m |0-OOM| 0 |0|0|0
+| 512m|13775 |24|2|640ms|130ms|
+| 1g|22129 | 19|2|420ms|310ms|
+| 2g|21791 | 10|0|360ms|0|
+| 4g|23700 | 7| 0|310ms|0|
+| 8g|23245 | 7| 0|360ms|0|
+
+young gc 时，使用的是并行gc，gc时需要全程STW
+full gc,CMS 并发gc
+
+## 4.G1 GC
+	程序执行1s
+	命令：java -XX:+UseG1GC -Xms256m -Xmx256m -Xloggc:gc.demo.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps  GCLogAnalysis
+
+| Xms&Xmx | 生成对象个数 | youngGC次数 |fullGC次数 |Mixed GC次数|Pause GC总时长|Concurrent GC 总时长
+| :----| :---- | :---- |:---- |:---- |:---- |
+| 256m |0-OOM| 0 |0|0|0|0
+| 512m|11733 |41|3|39|480ms|28ms|
+| 1g|20405 | 19|0|10|350ms|10.9ms|
+| 2g|23530 | 13|0|1|200ms|2.56ms|
+| 4g|22146 | 14| 0|0|180ms|0|
+| 8g|24142 | 14| 0|0|290ms|0|
