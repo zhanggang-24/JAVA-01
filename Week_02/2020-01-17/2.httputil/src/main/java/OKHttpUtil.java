@@ -6,7 +6,7 @@ public class OKHttpUtil {
     private static  OkHttpClient client = new OkHttpClient();
     public static void main(String[] args) throws IOException {
 
-        String url = "http://localhost:8808/test";
+        String url = "http://localhost:8801";
         String result = getMethod(url);
         System.out.println(result);
     }
