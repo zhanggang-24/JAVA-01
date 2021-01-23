@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a87beffd-8feb-497c-8171-857936516142" name="Default Changelist" comment="">
+    <list default="true" id="a87beffd-8feb-497c-8171-857936516142" name="Default Changelist" comment="使用okhttp">
       <change beforePath="$PROJECT_DIR$/../../../Week_01/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_01/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/outbound/okhttp/OKhttpOutBoundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/outbound/okhttp/OKhttpOutBoundHandler.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +51,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/io/github/zhanggang/outbound/httclient4" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
@@ -101,8 +103,16 @@
       <option name="presentableId" value="Default" />
       <updated>1611321216150</updated>
       <workItem from="1611321219387" duration="6233000" />
-      <workItem from="1611365880946" duration="16601000" />
+      <workItem from="1611365880946" duration="22538000" />
     </task>
+    <task id="LOCAL-00001" summary="使用okhttp">
+      <created>1611401289012</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611401289013</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,5 +133,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="使用okhttp" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用okhttp" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundHandler.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundHandler.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/nettygetway$NettyServerApplication.ic" NAME="NettyServerApplication Coverage Results" MODIFIED="1611406851819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>io.github.zhanggang.*</FILTER>
+    </SUITE>
   </component>
 </project>
