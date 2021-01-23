@@ -16,14 +16,14 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
 
     private final List<String> proxyServer;
 
-    //    private OKhttpOutBoundHandler oKhttpOutBoundHandler;
-    private HttpOutboundHandler httpOutboundHandler;
+    private OKhttpOutBoundHandler oKhttpOutBoundHandler;
+    //    private HttpOutboundHandler httpOutboundHandler;
     private HttpRequestFilter requestFilter = new HeaderHttpRequestFilter();
 
     public HttpInboundHandler(List<String> proxyServer) {
         this.proxyServer = proxyServer;
-//        this.oKhttpOutBoundHandler = new OKhttpOutBoundHandler(this.proxyServer);
-        this.httpOutboundHandler = new HttpOutboundHandler(this.proxyServer);
+        this.oKhttpOutBoundHandler = new OKhttpOutBoundHandler(this.proxyServer);
+//        this.httpOutboundHandler = new HttpOutboundHandler(this.proxyServer);
     }
 
     //读取数据事件
@@ -32,8 +32,8 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
 
         try {
             FullHttpRequest fullHttpRequest = (FullHttpRequest) msg;
-//            oKhttpOutBoundHandler.Handle(fullHttpRequest, ctx, requestFilter);
-            httpOutboundHandler.handle(fullHttpRequest, ctx, requestFilter);
+            oKhttpOutBoundHandler.Handle(fullHttpRequest, ctx, requestFilter);
+//            httpOutboundHandler.handle(fullHttpRequest, ctx, requestFilter);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

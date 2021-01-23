@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a87beffd-8feb-497c-8171-857936516142" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettygetway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/NettyServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/filter/HeaderHttpRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/filter/HeaderHttpResponseFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/filter/HttpRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/filter/HttpResponseFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/outbound/httclient4/HttpOutboundHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/outbound/httclient4/NamedThreadFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/outbound/okhttp/OKhttpOutBoundHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/router/HttpEndpointRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/router/RandomHttpEndpointRouter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Week_01/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_01/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundHandler.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611321216150</updated>
       <workItem from="1611321219387" duration="6233000" />
-      <workItem from="1611365880946" duration="16552000" />
+      <workItem from="1611365880946" duration="16601000" />
     </task>
     <servers />
   </component>
