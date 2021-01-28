@@ -32,7 +32,7 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
 
         try {
             FullHttpRequest fullHttpRequest = (FullHttpRequest) msg;
-            oKhttpOutBoundHandler.Handle(fullHttpRequest, ctx, requestFilter);
+            oKhttpOutBoundHandler.handle(fullHttpRequest, ctx, requestFilter);
 //            httpOutboundHandler.handle(fullHttpRequest, ctx, requestFilter);
         } catch (Exception e) {
             e.printStackTrace();

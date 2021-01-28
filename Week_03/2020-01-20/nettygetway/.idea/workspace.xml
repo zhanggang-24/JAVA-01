@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a87beffd-8feb-497c-8171-857936516142" name="Default Changelist" comment="" />
+    <list default="true" id="a87beffd-8feb-497c-8171-857936516142" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/router/WeightHttpEndpointRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/src/main/java/OKHttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/src/main/java/OKHttpUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/target/classes/OKHttpUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/target/classes/OKHttpUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/NettyServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/NettyServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/inbound/HttpInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/outbound/okhttp/OKhttpOutBoundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zhanggang/outbound/okhttp/OKhttpOutBoundHandler.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +51,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/io/github/zhanggang/outbound/httclient4" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/io/github/zhanggang/router" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\极客时间Java\homeWork\JAVA-01\Week_03\2020-01-20\nettygetway\src\main\java\io\github\zhanggang\router" />
       <recent name="E:\极客时间Java\homeWork\JAVA-01\Week_03\2020-01-20\nettygetway\src\main\java\io\github\zhanggang\outbound\httclient4" />
     </key>
   </component>
@@ -98,6 +107,8 @@
       <updated>1611321216150</updated>
       <workItem from="1611321219387" duration="6233000" />
       <workItem from="1611365880946" duration="22847000" />
+      <workItem from="1611580667837" duration="1229000" />
+      <workItem from="1611844541177" duration="1917000" />
     </task>
     <task id="LOCAL-00001" summary="使用okhttp">
       <created>1611401289012</created>

@@ -3,54 +3,47 @@ package io.github.zhanggang.outbound.okhttp;
 import io.github.zhanggang.filter.HeaderHttpResponseFilter;
 import io.github.zhanggang.filter.HttpRequestFilter;
 import io.github.zhanggang.filter.HttpResponseFilter;
+import io.github.zhanggang.outbound.httclient4.NamedThreadFactory;
 import io.github.zhanggang.router.HttpEndpointRouter;
 import io.github.zhanggang.router.RandomHttpEndpointRouter;
+import io.github.zhanggang.router.WeightHttpEndpointRouter;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.*;
-import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import org.apache.http.impl.nio.client.HttpAsyncClients;
-import org.apache.http.impl.nio.reactor.IOReactorConfig;
 import org.apache.http.protocol.HTTP;
-import org.omg.CORBA.PRIVATE_MEMBER;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.*;
 import java.util.stream.Collectors;
 
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
 public class OKhttpOutBoundHandler {
 
-
     private List<String> backendUrls;
-
     private OkHttpClient client;
+    private ExecutorService proxyService;
+
     HttpResponseFilter responseFilter = new HeaderHttpResponseFilter();
-    HttpEndpointRouter router = new RandomHttpEndpointRouter();
+    //HttpEndpointRouter router = new RandomHttpEndpointRouter();
+    HttpEndpointRouter router = new WeightHttpEndpointRouter();
 
     public OKhttpOutBoundHandler(List<String> backendUrls) {
         this.backendUrls = backendUrls.stream().map(this::formatUrl).collect(Collectors.toList());
         this.client = new OkHttpClient();
 
-//        int cores = Runtime.getRuntime().availableProcessors();
-//        IOReactorConfig ioConfig = IOReactorConfig.custom()
-//                .setConnectTimeout(1000)
-//                .setSoTimeout(1000)
-//                .setIoThreadCount(cores)
-//                .setRcvBufSize(32 * 1024)
-//                .build();
-
-//        httpclient = HttpAsyncClients.custom().setMaxConnTotal(40)
-//                .setMaxConnPerRoute(8)
-//                .setDefaultIOReactorConfig(ioConfig)
-//                .setKeepAliveStrategy((response, context) -> 6000)
-//                .build();
-//        httpclient.start();
+        int cores = Runtime.getRuntime().availableProcessors();
+        long keepAliveTime = 1000;
+        int queueSize = 2048;
+        RejectedExecutionHandler handler = new ThreadPoolExecutor.CallerRunsPolicy();//.DiscardPolicy();
+        proxyService = new ThreadPoolExecutor(cores, cores,
+                keepAliveTime, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(queueSize),
+                new NamedThreadFactory("proxyService"), handler);
 
     }
 
@@ -58,8 +51,12 @@ public class OKhttpOutBoundHandler {
         return backend.endsWith("/") ? backend.substring(0, backend.length() - 1) : backend;
     }
 
-    public void Handle(final FullHttpRequest fullHttpRequest, final ChannelHandlerContext ctx, HttpRequestFilter filter) {
+    public void handle(final FullHttpRequest fullHttpRequest, final ChannelHandlerContext ctx, HttpRequestFilter filter) {
+        proxyService.submit(() -> threadHandle(fullHttpRequest, ctx, filter));
+//        threadHandle(fullHttpRequest, ctx, filter);
+    }
 
+    private void threadHandle(final FullHttpRequest fullHttpRequest, final ChannelHandlerContext ctx, HttpRequestFilter filter) {
         FullHttpResponse response = null;
         try {
             //1.路由
@@ -93,6 +90,7 @@ public class OKhttpOutBoundHandler {
             ctx.flush();
         }
     }
+
 
     private String doGet(final FullHttpRequest inbound, String url) throws IOException {
         Request request = new Request.Builder()
