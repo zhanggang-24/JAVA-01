@@ -1,20 +1,28 @@
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 在主线程中调用子线程的join方法
+ * wait()/notify()
  */
 
-public class Thread01 {
+public class Thread04 {
     public static void main(String[] args) throws InterruptedException {
 
         long start = System.currentTimeMillis();
 
         AtomicInteger result = new AtomicInteger();
+        Object lock = new Object();
+
         Thread thread = new Thread(() -> {
-            result.set(sum());
+            synchronized (lock) {
+                result.set(sum());
+                lock.notifyAll();
+            }
         });
-        thread.start();
-        thread.join();
+
+        synchronized (lock) {
+            thread.start();
+            lock.wait();
+        }
 
         System.out.println("异步计算结果为：" + result);
         System.out.println("使用时间：" + (System.currentTimeMillis() - start) + " ms");
@@ -31,3 +39,4 @@ public class Thread01 {
         return fibo(a - 1) + fibo(a - 2);
     }
 }
+

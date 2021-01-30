@@ -1,10 +1,10 @@
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 在主线程中调用子线程的join方法
+ * 主线程中循环判断子线程：isAlive()，true就等待
  */
 
-public class Thread01 {
+public class Thread07 {
     public static void main(String[] args) throws InterruptedException {
 
         long start = System.currentTimeMillis();
@@ -14,7 +14,8 @@ public class Thread01 {
             result.set(sum());
         });
         thread.start();
-        thread.join();
+        while (thread.isAlive()) {
+        }
 
         System.out.println("异步计算结果为：" + result);
         System.out.println("使用时间：" + (System.currentTimeMillis() - start) + " ms");

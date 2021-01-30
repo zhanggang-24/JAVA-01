@@ -1,21 +1,30 @@
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 在主线程中调用子线程的join方法
+ * CyclicBarrier
  */
 
-public class Thread01 {
-    public static void main(String[] args) throws InterruptedException {
+public class Thread06 {
+    public static void main(String[] args) throws InterruptedException, BrokenBarrierException {
 
         long start = System.currentTimeMillis();
 
         AtomicInteger result = new AtomicInteger();
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(2);
         Thread thread = new Thread(() -> {
             result.set(sum());
+            try {
+                cyclicBarrier.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (BrokenBarrierException e) {
+                e.printStackTrace();
+            }
         });
         thread.start();
-        thread.join();
-
+        cyclicBarrier.await();
         System.out.println("异步计算结果为：" + result);
         System.out.println("使用时间：" + (System.currentTimeMillis() - start) + " ms");
 

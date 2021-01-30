@@ -1,20 +1,22 @@
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 在主线程中调用子线程的join方法
+ * 线程池，submit(),get()等待；
  */
 
-public class Thread01 {
-    public static void main(String[] args) throws InterruptedException {
+public class Thread09 {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         long start = System.currentTimeMillis();
 
         AtomicInteger result = new AtomicInteger();
-        Thread thread = new Thread(() -> {
+        ExecutorService executor = Executors.newFixedThreadPool(1);
+        executor.submit(() -> {
             result.set(sum());
-        });
-        thread.start();
-        thread.join();
+        }).get();
 
         System.out.println("异步计算结果为：" + result);
         System.out.println("使用时间：" + (System.currentTimeMillis() - start) + " ms");
