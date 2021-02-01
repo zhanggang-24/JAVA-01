@@ -1,13 +1,14 @@
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.FutureTask;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 线程池，Future<?> submit(Runnable task);submit(),get()等待；
+ * 线程池，shutdown()->isTerminated()判断是否结束
  */
 
-public class Thread09 {
+public class Thread13 {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         long start = System.currentTimeMillis();
@@ -16,7 +17,10 @@ public class Thread09 {
         ExecutorService executor = Executors.newFixedThreadPool(1);
         executor.submit(() -> {
             result.set(sum());
-        }).get();
+        });
+        executor.shutdown();
+        while (!executor.isTerminated()) {
+        }
 
         System.out.println("异步计算结果为：" + result);
         System.out.println("使用时间：" + (System.currentTimeMillis() - start) + " ms");
@@ -34,3 +38,4 @@ public class Thread09 {
         return fibo(a - 1) + fibo(a - 2);
     }
 }
+

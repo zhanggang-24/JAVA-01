@@ -1,22 +1,23 @@
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicInteger;
+
+import java.util.concurrent.*;
 
 /**
- * 线程池，Future<?> submit(Runnable task);submit(),get()等待；
+ * 线程池，FutureTask
  */
 
-public class Thread09 {
+public class Thread12 {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         long start = System.currentTimeMillis();
 
-        AtomicInteger result = new AtomicInteger();
+        Integer result;
         ExecutorService executor = Executors.newFixedThreadPool(1);
-        executor.submit(() -> {
-            result.set(sum());
-        }).get();
+
+        FutureTask<Integer> futureTask = new FutureTask<>(() -> sum());
+
+        executor.submit(futureTask);
+
+        result = futureTask.get();
 
         System.out.println("异步计算结果为：" + result);
         System.out.println("使用时间：" + (System.currentTimeMillis() - start) + " ms");
@@ -34,3 +35,4 @@ public class Thread09 {
         return fibo(a - 1) + fibo(a - 2);
     }
 }
+
