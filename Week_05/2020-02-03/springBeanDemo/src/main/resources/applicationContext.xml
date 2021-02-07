@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--导入其他的xml-->
+    <import resource="bean.xml"/>
+
+    <!--构造函数注入-->
+    <bean id="accountService1" class="github.zhanggang.xml.service.XmlAccountServiceImpl">
+        <constructor-arg name="userName" value="李四"/>
+        <constructor-arg name="accountDao" ref="accountDao1"/>
+    </bean>
+
+    <!--set注入-->
+    <bean id="accountDao1" class="github.zhanggang.xml.dao.XmlAccountDaoImpl">
+        <property name="accountNumber" value="388888888"></property>
+        <property name="phones">
+            <list>
+                <value>191000000</value>
+                <value>011-111111</value>
+                <value>183000000</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>

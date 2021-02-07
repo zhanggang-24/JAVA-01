@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="accountService" class="github.zhanggang.xml.service.XmlAccountServiceImpl">
+        <constructor-arg name="userName" value="张三"/>
+        <constructor-arg name="accountDao" ref="accountDao"/>
+    </bean>
+
+    <bean id="accountDao" class="github.zhanggang.xml.dao.XmlAccountDaoImpl">
+        <property name="accountNumber" value="63033333333"></property>
+        <property name="phones">
+            <list>
+                <value>181000000</value>
+                <value>021-111111</value>
+                <value>153000000</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
