@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="accountService" class="github.zhanggang.service.XmlAccountServiceImpl">
+        <property name="accountDao" ref="accountDao"></property>
+    </bean>
+
+    <bean id="accountDao" class="github.zhanggang.dao.XmlAccountDaoImpl"></bean>
+
+</beans>

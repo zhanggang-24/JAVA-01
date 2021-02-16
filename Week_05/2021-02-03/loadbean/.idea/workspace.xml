@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eafd38a4-4582-4daf-be1e-5fcbf20d3ab6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/MyXmlApplicationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/dao/IXmlAccountDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/dao/XmlAccountDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/service/IXmlAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/service/XmlAccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/zhanggang/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/zhanggang/MyXmlApplicationContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/zhanggang/dao/IXmlAccountDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/zhanggang/dao/XmlAccountDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/zhanggang/service/IXmlAccountService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/zhanggang/service/XmlAccountServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/src/main/java/OKHttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/src/main/java/OKHttpUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/target/classes/OKHttpUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/target/classes/OKHttpUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1oXsdypMxEtmYfzjS1UVVadMl4P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1612924145199" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springBeanDemo" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="github.zhanggang.service" />
+      <recent name="github.zhanggang.dao" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.zhanggang.Client" />
+      <module name="loadbean" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.zhanggang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eafd38a4-4582-4daf-be1e-5fcbf20d3ab6" name="Default Changelist" comment="" />
+      <created>1612835882202</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612835882202</updated>
+      <workItem from="1612835894049" duration="10311000" />
+      <workItem from="1612919958976" duration="1786000" />
+      <workItem from="1613444362487" duration="134000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
