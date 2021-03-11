@@ -1,0 +1,453 @@
+
+create schema demo_ds_0;
+create schema demo_ds_1;
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_0(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_1(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_2(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_3(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_4(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_5(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_6(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_7(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_8(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_9(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_10(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_11(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_12(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_13(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_14(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_0.t_user_order_15(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+-- -----------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_0(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_1(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_2(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_3(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_4(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_5(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_6(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_7(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_8(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_9(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_10(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_11(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_12(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_13(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_14(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
+
+CREATE TABLE IF NOT EXISTS demo_ds_1.t_user_order_15(
+order_id bigint NOT NULL COMMENT '订单id',
+user_id  bigint NOT NULL COMMENT '用户id',
+addr_id  bigint NOT NULL COMMENT '收货地址id',
+order_type TINYINT NOT NULL DEFAULT 0 COMMENT '订单类型 1=代付款，2=待收货，3=已完成，4=已取消，5=已删除',
+order_no VARCHAR(100) NOT NULL DEFAULT '' COMMENT '订单号',
+order_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+pay_method TINYINT NOT NULL DEFAULT 0 COMMENT '支付方式 1=支付宝，2=微信',
+total_amount DECIMAL(16,2) NOT NULL DEFAULT 0  COMMENT '商品总额',
+create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY(order_id)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT '用户订单表';
