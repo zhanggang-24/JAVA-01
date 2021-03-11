@@ -2,22 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb752eaf-a39a-48ef-8326-39ac88237d81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/shardingdemo/mapper/UserOrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/shardingdemo/model/UserOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/shardingdemo/service/UserOrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/shardingdemo/ShardingDemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2021-03-06/transactionDemo/tx-xa-jdbc-demo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2021-03-06/transactionDemo/tx-xa-jdbc-demo/src/main/java/github/zhanggang/txdemo/DemoMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2021-03-06/transactionDemo/tx-xa-jdbc-demo/src/main/java/github/zhanggang/txdemo/XAOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2021-03-06/transactionDemo/tx-xa-jdbc-demo/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2021-03-06/transactionDemo/tx-xa-jdbc-demo/src/main/resources/sharding-databases-tables.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/src/main/java/OKHttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/src/main/java/OKHttpUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/target/classes/OKHttpUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_02/2020-01-17/2.httputil/target/classes/OKHttpUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Week_07/2021-03-03/dataSouce/version2/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_07/2021-03-03/dataSouce/version2/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingdemo.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,12 +60,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="github.zhanggang.shardingdemo" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\GeekTimeJava\homeWork\JAVA-01\Week_08\2021-03-03\shardingdemo\src\main\resources\mapper" />
     </key>
@@ -66,7 +87,7 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.ShardingdemoApplicationTests.findAll">
-    <configuration name="ShardingdemoApplicationTests.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShardingdemoApplicationTests.add" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="shardingdemo" />
       <extension name="coverage">
         <pattern>
@@ -108,7 +129,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ShardingdemoApplicationTests.findAll" />
-        <item itemvalue="JUnit.ShardingdemoApplicationTests.add" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +143,11 @@
       <option name="presentableId" value="Default" />
       <updated>1615211948311</updated>
       <workItem from="1615211952417" duration="2032000" />
-      <workItem from="1615467286705" duration="5542000" />
+      <workItem from="1615467286705" duration="6276000" />
+      <workItem from="1615474240817" duration="38000" />
+      <workItem from="1615474329189" duration="75000" />
+      <workItem from="1615474447874" duration="492000" />
+      <workItem from="1615474997580" duration="212000" />
     </task>
     <servers />
   </component>
