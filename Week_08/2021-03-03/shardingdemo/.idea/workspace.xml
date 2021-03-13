@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb752eaf-a39a-48ef-8326-39ac88237d81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/zhanggang/shardingdemo/ShardingDemoApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../2021-03-06/transactionDemo/tx-xa-jdbc-demo/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../2021-03-06/transactionDemo/tx-xa-jdbc-demo/src/main/java/github/zhanggang/txdemo/DemoMain.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../2021-03-06/transactionDemo/tx-xa-jdbc-demo/src/main/java/github/zhanggang/txdemo/XAOrderService.java" afterDir="false" />
@@ -14,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_03/2020-01-20/nettygetway/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Week_07/2021-03-03/dataSouce/version2/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week_07/2021-03-03/dataSouce/version2/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingdemo.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,6 +146,9 @@
       <workItem from="1615474329189" duration="75000" />
       <workItem from="1615474447874" duration="492000" />
       <workItem from="1615474997580" duration="212000" />
+      <workItem from="1615475603287" duration="21000" />
+      <workItem from="1615475649916" duration="3000" />
+      <workItem from="1615475663343" duration="90000" />
     </task>
     <servers />
   </component>
